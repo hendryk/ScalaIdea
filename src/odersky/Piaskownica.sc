@@ -1,6 +1,6 @@
 import odersky.Rational
 
-new Rational(1, 2)
-new Rational(1, 3)
+val aa = new Rational(2,3)
+val bb = new Rational(1,2)
 
-val z = new Rational(2, 3)
+aa + bb

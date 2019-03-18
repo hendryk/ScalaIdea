@@ -7,5 +7,11 @@ object MainRational extends App {
 
     val y = new Rational(2, 3)
 
-    print(x.add(y))
+    println(x + y)
+    println(x * x)
+    println(x * 2)
+
+    implicit def intToRational(x: Int): Rational = new Rational(x)
+
+    println(2 * x)
 }

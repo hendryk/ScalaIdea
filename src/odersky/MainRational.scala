@@ -14,4 +14,11 @@ object MainRational extends App {
     implicit def intToRational(x: Int): Rational = new Rational(x)
 
     println(2 * x)
+
+    def sum(a:Int, b:Int, c:Int) = a + b + c
+
+    val fu = sum(2, _, 3)
+
+    println(fu(3))
+
 }

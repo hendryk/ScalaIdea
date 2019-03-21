@@ -11,6 +11,12 @@ class ArrayElement(conts: Array[String]) extends Element {
     val contents: Array[String] = conts
 }
 
+
 object Glowny extends App {
     val ae: ArrayElement = new ArrayElement(Array("hello"))
+
+    def sumInts(a: Int, b: Int): Int =
+        if (a > b) 0 else a + sumInts(a + 1, b)
+
+    println(sumInts(1,10))
 }

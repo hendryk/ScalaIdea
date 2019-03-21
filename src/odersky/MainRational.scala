@@ -15,10 +15,9 @@ object MainRational extends App {
 
     println(2 * x)
 
-    def sum(a:Int, b:Int, c:Int) = a + b + c
+    def sum(a: Int, b: Int, c: Int) = a + b + c
 
     val fu = sum(2, _, 3)
 
     println(fu(3))
-
 }

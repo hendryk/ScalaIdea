@@ -7,7 +7,7 @@ object Rationals extends App {
     val y = new Rational(5, 7)
     val z = new Rational(3, 2)
 
-    println(x.unary_-)
+    println(-x)
     println(x - y)
 
     println(x + y + z)
@@ -26,13 +26,15 @@ class Rational(x: Int, y: Int) {
 
     private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
-    val numer: Int = x
-    val denom: Int = y
+    private val g = gcd(x.abs, y.abs)
+    private val numer = x / g
+    private val denom = y / g
 
     override def toString: String = {
         val g = gcd(numer, denom)
-        numer / g + "/" + denom / g
+        numer + "/" + denom
     }
+
     def +(tamten: Rational) =
         new Rational(
             numer * tamten.denom + tamten.numer * denom,
